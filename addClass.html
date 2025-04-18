@@ -1,75 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Classes - Assignment Tracker</title>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-        <link rel="stylesheet" href="style.css" />
-    </head>
-    <body>
-        <nav
-        class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Classes | Assignment Tracker</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand text-danger fw-bold" href="#"
+          >Assignment Tracker</a
         >
-            <div class="container">
-                <a class="navbar-brand text-danger fw-bold" href="#"
-                >Assignment Tracker</a
-                >
-                <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav"
-                >
-                <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                    <a class="nav-link active text-danger" href="index.html"
-                        >Dashboard</a
-                    >
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="addClass.html">Classes</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Add Assignment</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Calendar</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Assignments</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="#">Settings</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link" href="aboutUs.html">About</a>
-                    </li>
-                </ul>
-                </div>
-            </div>
-        </nav>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active text-danger" href="addClass.html"
+                >Classes</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Add Assignment</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Calendar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Assignments</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="settings.html">Settings</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="aboutUs.html">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-        <main class="container py-4">
-            <h2 class="text-danger mb-4">Your Classes</h2>
+    <main class="container py-4">
+      <h2 class="text-danger mb-4">Your Classes</h2>
 
-            <form id="classForm">
-                <div class="mb-3">
-                    <label for="className" class="form-label">Class Name</label>
-                    <input type="text" class="form-control" id="className" placeholder="Enter class name" required />
-                </div>
-                <button type="submit" class="btn btn-danger">Add Class</button>
-            </form>
+      <form id="classForm">
+        <div class="mb-3">
+          <label for="className" class="form-label">Class Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="className"
+            placeholder="Enter class name"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-danger">Add Class</button>
+      </form>
 
-            <div class="row mt-4" id="classList"></div>
-        </main>
+      <div class="row mt-4" id="classList"></div>
+    </main>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-        <script src="dashboard.js"></script> 
-        <script src="classes.js"></script>
-    </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="classes.js"></script>
+  </body>
 </html>
-

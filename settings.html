@@ -64,14 +64,53 @@
       </div>
     </nav>
 
-    <div class="settings-container">
-      <h1 class="settings-title text-danger mb-4">Settings</h1>
-      <div class="settings-action">
-          <button id="darkModeToggle" class="btn btn-secondary">Toggle Dark Mode</button>
-      </div>
-  </div>
-  <script src="settings.js"></script>
-  
+    <div class="container py-4">
+      <h1 class="text-danger mb-4">Settings</h1>
 
+    </br>
+  
+      <div class="mb-4">
+        <button id="darkModeToggle" class="btn btn-secondary">Toggle Dark Mode</button>
+      </div>
+
+    </br>
+  
+      <fieldset class="mb-4">
+        <legend class="text-danger">Notification Settings</legend>
+        <form id="notificationForm" class="mb-2">
+          <div class="form-check">
+            <input
+              type="checkbox"
+              id="emailNotifications"
+              class="form-check-input"
+            />
+            <label for="emailNotifications" class="form-check-label"
+              >Email Notifications</label>
+          </div>
+          <div class="form-check">
+            <input
+              type="checkbox"
+              id="textNotifications"
+              class="form-check-input"
+            />
+            <label for="textNotifications" class="form-check-label"
+              >Text Notifications</label>
+          </div>
+        </form>
+
+      </br>
+
+      <fieldset class="mb-4">
+        <legend class="text-danger">Profile Settings</legend>
+        <form id="usernameForm" class="mb-2">
+          <label for="usernameInput" class="form-label">Display Name:</label>
+          <input type="text" id="usernameInput" class="form-control w-25" placeholder="Enter your name" required />
+          <button type="submit" class="btn btn-danger mt-2">Save</button>
+        </form>
+        <p>Current Name: <strong id="displayName">Not set</strong></p>
+      </fieldset>
+    </div>
+  
+    <script src="settings.js"></script>
 </body>
 </html>

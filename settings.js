@@ -19,4 +19,24 @@ document.addEventListener("DOMContentLoaded", () => {
     // Saves the preference in local storage
     localStorage.setItem("darkMode", isDarkMode);
   });
+
+  // Creating variables for the username
+  const usernameInput = document.getElementById("usernameInput");
+  const displayName = document.getElementById("displayName");
+
+  // Getting the saved name from localstorage
+  const savedName = localStorage.getItem("username");
+  if (savedName) {
+    // If there is a saved name, update the text
+    displayName.textContent = savedName;
+    usernameInput.value = savedName;
+  }
+
+  // Event listener for the button to set the name in local storage and text
+  document.getElementById("usernameForm").addEventListener("submit", (e) => {
+    e.preventDefault();
+    const name = usernameInput.value;
+    localStorage.setItem("username", name);
+    displayName.textContent = name;
+  });
 });

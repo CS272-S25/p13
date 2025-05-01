@@ -227,3 +227,8 @@ body.dark-mode header {
 .date.inactive:hover {
   color: #fff;
 }
+
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    
+}

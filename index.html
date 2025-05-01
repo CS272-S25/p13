@@ -8,6 +8,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css" />
     <script src="darkMode.js" defer></script>
   </head>
@@ -59,36 +61,53 @@
 
     <main class="dashboard">
       <div class="container py-4">
-        <div class="row mb-4">
-          <div class="col-12">
-            <h2 class="text-danger mb-4">Upcoming Assignments</h2>
-          </div>
-        </div>
+        <div class="row">
+         
+          <div class="col-lg-8">
+            
+            <div class="row mb-4" id="class-cards">
+                <div class="col-12">
+                    <h2 class="mb-3">Your Classes</h2>
+                </div>
+               
+            </div>
 
-        <div class="row" id="assignment-cards"></div>
-
-        <div class="row mt-4">
-          <div class="col-md-4 mb-4">
-            <div class="card shadow-sm">
-              <div class="card-body text-center">
-                <h3 class="text-danger">3</h3>
-                <p class="text-muted">Upcoming Assignments</p>
-              </div>
+          
+            <div class="row" id="assignment-cards">
+              
             </div>
           </div>
-          <div class="col-md-4 mb-4">
-            <div class="card shadow-sm">
-              <div class="card-body text-center">
-                <h3 class="text-danger">2</h3>
-                <p class="text-muted">Due This Week</p>
+
+          
+          <div class="col-lg-4">
+            <h2 class="mb-3">Stats</h2>
+            <div class="row">
+              <div class="col-12 mb-4">
+                <div class="card shadow-sm">
+                  <div class="card-body text-center">
+                    <i class="bi bi-calendar-event fs-2 text-primary mb-2"></i>
+                    <h3 class="text-primary">0</h3>
+                    <p class="text-muted mb-0">Upcoming Assignments</p>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4 mb-4">
-            <div class="card shadow-sm">
-              <div class="card-body text-center">
-                <h3 class="text-danger">3</h3>
-                <p class="text-muted">Classes</p>
+              <div class="col-12 mb-4">
+                <div class="card shadow-sm">
+                  <div class="card-body text-center">
+                    <i class="bi bi-calendar-week fs-2 text-warning mb-2"></i>
+                    <h3 class="text-warning">0</h3>
+                    <p class="text-muted mb-0">Due This Week</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 mb-4">
+                <div class="card shadow-sm">
+                  <div class="card-body text-center">
+                    <i class="bi bi-journal-bookmark fs-2 text-info mb-2"></i>
+                    <h3 class="text-info">0</h3>
+                    <p class="text-muted mb-0">Classes</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

@@ -143,3 +143,87 @@ body.dark-mode header {
   color: white;
 }
 /* Eventually try and change nav bar for dark mode, I just implemented simple version */
+
+/* Calendar CSS */
+.calendar {
+  width: 1000px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  padding: 50px;
+  margin: 50px;  
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: large;
+}
+
+.header button {
+  border: none;
+  margin: 5px;
+  padding: 5px;
+  border-radius: 10%;
+  background-color: blue;
+}
+
+.monthYear {
+  text-align: center;
+  font-weight: 600;
+  width: 150px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7,1fr);
+}
+
+.day {
+  text-align: center;
+  padding: 5px;
+  color: #999fa6;
+  font-weight: 500;
+}
+
+.dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+  margin: auto;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  transition: 0.2s;
+  font-size: medium;
+}
+
+.date:hover,
+.date.active {
+  background: blue;
+  color: #fff;
+}
+
+.date.inactive {
+  color: #999fa6;
+}
+
+.date.inactive:hover {
+  color: #fff;
+}

@@ -129,20 +129,58 @@ body.dark-mode header {
   gap: 1rem; /* Spacing between elements */
 }
 
-#darkModeToggle {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  cursor: pointer;
-  border: none;
-  border-radius: 0.5rem;
-  transition: background-color 0.3s ease;
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
-#darkModeToggle:hover {
-  background-color: var(--primary-color);
+body.dark-mode header {
+  background-color: #1f1f1f;
+  color: var(--primary-color);
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode header nav a {
+  color: #cccccc;
+}
+
+body.dark-mode header nav a.active,
+body.dark-mode header nav a:hover {
+  color: var(--primary-color);
+}
+
+body.dark-mode .calendar {
+  background-color: #2a2a2a;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .header button {
+  background-color: #1e88e5;
   color: white;
 }
-/* Eventually try and change nav bar for dark mode, I just implemented simple version */
+
+body.dark-mode .date {
+  color: #cccccc;
+}
+
+body.dark-mode .date:hover,
+body.dark-mode .date.active {
+  background-color: #1e88e5;
+  color: white;
+}
+
+body.dark-mode .date.inactive {
+  color: #666;
+}
+
+body.dark-mode .date.inactive:hover {
+  color: white;
+}
+
+body.dark-mode .settings-container {
+  background-color: #121212;
+  color: #e0e0e0;
+}
 
 /* Calendar CSS */
 .calendar {
@@ -153,9 +191,9 @@ body.dark-mode header {
   padding: 10px;
   background: #e5e7eb;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   padding: 50px;
-  margin: 50px;  
+  margin: 50px;
 }
 
 .header {
@@ -182,7 +220,7 @@ body.dark-mode header {
 
 .days {
   display: grid;
-  grid-template-columns: repeat(7,1fr);
+  grid-template-columns: repeat(7, 1fr);
 }
 
 .day {
@@ -229,6 +267,5 @@ body.dark-mode header {
 }
 
 .navbar-nav .nav-link.active {
-    font-weight: bold;
-    
+  font-weight: bold;
 }

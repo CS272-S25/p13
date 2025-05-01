@@ -16,9 +16,7 @@
       class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm"
     >
       <div class="container">
-        <a class="navbar-brand text-danger fw-bold" href="#"
-          >Assignment Tracker</a
-        >
+        <a class="navbar-brand text-danger fw-bold">Assignment Tracker</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -30,9 +28,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link active text-danger" href="index.html"
-                >Dashboard</a
-              >
+              <a class="nav-link" href="index.html">Dashboard</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="addClass.html">Classes</a>
@@ -41,10 +37,12 @@
               <a class="nav-link" href="#">Add Assignment</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Calendar</a>
+              <a class="nav-link active text-danger" href="calendar.html"
+                >Calendar</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Assignments</a>
+              <a class="nav-link" href="assignments.html">Assignments</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="settings.html">Settings</a>
@@ -59,21 +57,21 @@
 
     <div class="calendar">
       <h1 class="text-danger mb-4">Calendar</h1>
-        <div class="header">
-            <button id="prevButton">Previous</button>
-            <div class="monthYear" id="monthYear"></div>
-            <button id="nextButton">Next</button>
-        </div>
-        <div class="days">
-            <div class="day">Mon</div>
-            <div class="day">Tue</div>
-            <div class="day">Wed</div>
-            <div class="day">Thurs</div>
-            <div class="day">Fri</div>
-            <div class="day">Sat</div>
-            <div class="day">Sun</div>
-        </div>
-        <div class="dates" id="dates"></div>
+      <div class="header">
+        <button id="prevButton">Previous</button>
+        <div class="monthYear" id="monthYear"></div>
+        <button id="nextButton">Next</button>
+      </div>
+      <div class="days">
+        <div class="day">Mon</div>
+        <div class="day">Tue</div>
+        <div class="day">Wed</div>
+        <div class="day">Thurs</div>
+        <div class="day">Fri</div>
+        <div class="day">Sat</div>
+        <div class="day">Sun</div>
+      </div>
+      <div class="dates" id="dates"></div>
     </div>
 
     <script src="calendar.js"></script>

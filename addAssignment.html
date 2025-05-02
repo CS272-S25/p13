@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Assignment | Assignment Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="darkMode.js" defer></script>
+</head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand text-danger fw-bold" href="index.html">Assignment Tracker</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="index.html">Dashboard</a></li>
+                        <li class="nav-item"><a class="nav-link" href="addClass.html">Classes</a></li>
+                        <li class="nav-item"><a class="nav-link active text-danger" href="addAssignment.html">Add Assignment</a></li>
+                        <li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
+                        <li class="nav-item"><a class="nav-link" href="assignments.html">Assignments</a></li>
+                        <li class="nav-item"><a class="nav-link" href="settings.html">Settings</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutUs.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>  
+
+        <main class="container py-4">
+            <h2 class="text-danger mb-4">Add New Assignment</h2>
+            
+            <form id="assignmentForm">
+                <div class="mb-3">
+                    <label for="assignmentTitle" class="form-label">Assignment Title</label>
+                    <input type="text" class="form-control" id="assignmentTitle" placeholder="Enter assignment title" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="assignmentClass" class="form-label">Class</label>
+                    <select class="form-control" id="assignmentClass" required>
+                        <option value="" disabled selected>Loading classes...</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="dueDate" class="form-label">Due Date</label>
+                    <input type="date" class="form-control" id="dueDate" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="assignmentDesc" class="form-label">Description</label>
+                    <textarea class="form-control" id="assignmentDesc" rows="3" placeholder="Enter description"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-danger">Add Assignment</button>
+                <a href="assignments.html" class="btn btn-secondary ms-2">Go to Assignments</a>
+
+            </form>
+        </main>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="addAssignment.js"></script>
+    </body>
+</html>

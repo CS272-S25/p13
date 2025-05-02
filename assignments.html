@@ -1,61 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard | Assignment Tracker</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments | Assignment Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
     <script src="darkMode.js" defer></script>
-  </head>
-  <body>
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm"
-    >
-      <div class="container">
-        <a class="navbar-brand text-danger fw-bold" href="index.html"
-          >Assignment Tracker</a
-        >
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="addClass.html">Classes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Add Assignment</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="calendar.html">Calendar</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active text-danger" href="assignments.html"
-                >Assignments</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="settings.html">Settings</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="aboutUs.html">About</a>
-            </li>
-          </ul>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand text-danger fw-bold" href="index.html">Assignment Tracker</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link" href="addClass.html">Classes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="addAssignment.html">Add Assignment</a></li>
+                    <li class="nav-item"><a class="nav-link" href="calendar.html">Calendar</a></li>
+                    <li class="nav-item"><a class="nav-link active text-danger" href="assignments.html">Assignments</a></li>
+                    <li class="nav-item"><a class="nav-link" href="settings.html">Settings</a></li>
+                    <li class="nav-item"><a class="nav-link" href="aboutUs.html">About</a></li>
+                </ul>
+            </div>
         </div>
-      </div>
     </nav>
-  </body>
+    <main class="container py-4">
+        <h2 class="text-danger mb-4">Your Assignments</h2>
+        <div class="row mt-4" id="assignmentList"></div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assignments.js"></script>
+</body>
 </html>
+

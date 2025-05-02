@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="card-body pt-3">
                         <h5 class="card-title">${cls}</h5>
                         <p class="card-text text-muted small">View assignments for this class.</p>
-                        <a href="#" class="btn btn-sm btn-outline-secondary stretched-link" data-class-name="${cls}">View Assignments</a>
+                        <a href="assignments.html" class="btn btn-sm btn-outline-secondary stretched-link" data-class-name="${cls}">View Assignments</a>
                     </div>
                 </div>
             `;

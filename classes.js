@@ -1,13 +1,18 @@
-document.addEventListener('DOMContentLoaded', updateClassList);
+document.addEventListener('DOMContentLoaded', function() {
+    let storedClasses = JSON.parse(localStorage.getItem('classes')) || [];
+    localStorage.setItem('classes', JSON.stringify(storedClasses)); // Ensure it initializes storage
+    updateClassList();
+});
+
 document.querySelector('#classForm').addEventListener('submit', function(event) {
     event.preventDefault();
     
     let className = document.querySelector('#className').value.trim();
-    let storedAssignments = JSON.parse(localStorage.getItem('assignments')) || [];
+    let storedClasses = JSON.parse(localStorage.getItem('classes')) || [];
 
-    if (className && !storedAssignments.some(a => a.class === className)) {
-        storedAssignments.push({ id: storedAssignments.length + 1, class: className, dueDate: "TBD", description: "No assignments yet." });
-        localStorage.setItem('assignments', JSON.stringify(storedAssignments));
+    if (className && !storedClasses.includes(className)) {
+        storedClasses.push(className);
+        localStorage.setItem('classes', JSON.stringify(storedClasses)); // Store separately
         updateClassList();
         document.querySelector('#className').value = '';
     }
@@ -17,10 +22,9 @@ function updateClassList() {
     let classList = document.querySelector('#classList');
     classList.innerHTML = '';
 
-    let storedAssignments = JSON.parse(localStorage.getItem('assignments')) || [];
-    let classes = [...new Set(storedAssignments.map(a => a.class))];
+    let storedClasses = JSON.parse(localStorage.getItem('classes')) || [];
 
-    classes.forEach(cls => {
+    storedClasses.forEach(cls => {
         let card = document.createElement('div');
         card.className = 'col-md-6 col-lg-4 mb-4';
 
@@ -47,8 +51,14 @@ function updateClassList() {
 }
 
 function removeClass(className) {
+    let storedClasses = JSON.parse(localStorage.getItem('classes')) || [];
     let storedAssignments = JSON.parse(localStorage.getItem('assignments')) || [];
+
+    storedClasses = storedClasses.filter(cls => cls !== className);
+    localStorage.setItem('classes', JSON.stringify(storedClasses));
+
     storedAssignments = storedAssignments.filter(a => a.class !== className);
     localStorage.setItem('assignments', JSON.stringify(storedAssignments));
+
     updateClassList();
 }

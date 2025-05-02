@@ -269,3 +269,8 @@ body.dark-mode .settings-container {
 .navbar-nav .nav-link.active {
   font-weight: bold;
 }
+
+#assignmentClass {
+  display: block !important;
+  visibility: visible !important;
+}

@@ -235,30 +235,30 @@ body.dark-mode hr {
 
 /* Calendar CSS */
 .calendar {
-  width: 1000px;
+  width: 64rem;
   height: auto;
   display: flex;
   flex-direction: column;
-  padding: 10px;
-  background: #e5e7eb;
+  padding: 1rem;
+  background: #f1f2f4;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  padding: 50px;
-  margin: 50px;
+  margin: auto;
+  padding: 4rem;
 }
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px;
+  padding: 1rem;
   font-size: large;
 }
 
 .header button {
   border: none;
-  margin: 5px;
-  padding: 5px;
+  margin: 0.5rem;
+  padding: 0.5rem;
   border-radius: 10%;
   background-color: blue;
 }
@@ -266,7 +266,7 @@ body.dark-mode hr {
 .monthYear {
   text-align: center;
   font-weight: 600;
-  width: 150px;
+  width: 9rem;
 }
 
 .days {
@@ -276,7 +276,7 @@ body.dark-mode hr {
 
 .day {
   text-align: center;
-  padding: 5px;
+  padding: 0.5rem;
   color: #999fa6;
   font-weight: 500;
 }
@@ -284,7 +284,7 @@ body.dark-mode hr {
 .dates {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
-  gap: 5px;
+  gap: 0.5rem;
 }
 
 .date {
@@ -292,13 +292,13 @@ body.dark-mode hr {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 10px;
+  padding: 1rem;
   margin: auto;
   cursor: pointer;
   font-weight: 600;
   border-radius: 50%;
-  width: 40px;
-  height: 40px;
+  width: 4rem;
+  height: 4rem;
   transition: 0.2s;
   font-size: medium;
 }
@@ -306,6 +306,11 @@ body.dark-mode hr {
 .date:hover,
 .date.active {
   background: blue;
+  color: #fff;
+}
+
+.date.due {
+  background: red;
   color: #fff;
 }
 

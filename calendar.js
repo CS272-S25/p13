@@ -26,10 +26,29 @@ const updateCalendar = () => {
         datesHTML += '<div class="date inactive">' + prevDate.getDate() + '</div>';
     }
 
-    for(let j = 1; j <= totalDays; j++) {
+    outerLoop: for(let j = 1; j <= totalDays; j++) {
         const date = new Date(currentYear, currentMonth, j);
-        const activeClass = date.toDateString() === new Date().toDateString() ? 'active' : '';
-        datesHTML += '<div class="date ' + activeClass + '">' + j + '</div>';
+        const activeDay = date.toDateString() === new Date().toDateString() ? 'active' : '';
+        let dayString = date.getDate().toString();
+        let monthString = date.getMonth().toString();
+
+        if (parseInt(date.getDate()) < 10) {
+            dayString = "0" + date.getDate().toString();
+        }
+        if(parseInt(date.getMonth())+1 < 10) {
+            monthString = "0" + (date.getMonth()+1).toString();
+        }
+        let dateString = date.getFullYear() + '-' + monthString + '-' + dayString;
+
+        for(let r = 0; r < storedAssignments.length; r++) {
+            if(storedAssignments[r].dueDate === dateString) {
+                datesHTML += '<div class="date due">' + j + '</div>';
+                continue outerLoop;
+            }
+
+        }
+
+        datesHTML += '<div class="date ' + activeDay + '">' + j + '</div>';
     }
 
     for(let k = 1; k <= 7 - lastDayIndex; k++) {

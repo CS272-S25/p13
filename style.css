@@ -261,6 +261,7 @@ body.dark-mode hr {
   padding: 0.5rem;
   border-radius: 10%;
   background-color: blue;
+  color: white;
 }
 
 .monthYear {

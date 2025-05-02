@@ -96,46 +96,12 @@ header nav a:hover {
 }
 
 body.dark-mode {
-  background-color: #2d2d2d;
-  color: #f5f5f5;
-}
-
-body.dark-mode header {
-  background-color: #3e3e3e;
-  color: var(--primary-color);
-  border-bottom: 1px solid #333;
-}
-
-.settings-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh; /* Full viewport height */
-  padding: 2rem;
-}
-
-.settings-title {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  color: var(--primary-color);
-}
-
-.settings-action {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem; /* Spacing between elements */
-}
-
-body.dark-mode {
   background-color: #121212;
   color: #e0e0e0;
 }
 
 body.dark-mode header {
-  background-color: #1f1f1f;
+  background-color: #3e3e3e;
   color: var(--primary-color);
   border-bottom: 1px solid #333;
 }
@@ -180,6 +146,91 @@ body.dark-mode .date.inactive:hover {
 body.dark-mode .settings-container {
   background-color: #121212;
   color: #e0e0e0;
+}
+
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border-color: #333;
+}
+
+body.dark-mode .text-muted,
+body.dark-mode .card-subtitle {
+  color: #adb5bd !important;
+}
+
+body.dark-mode .text-primary {
+  color: #6ea8fe !important;
+}
+body.dark-mode .text-warning {
+  color: #fec107 !important;
+}
+body.dark-mode .text-info {
+  color: #6edff6 !important;
+}
+body.dark-mode .text-danger,
+body.dark-mode .navbar-brand.text-danger,
+body.dark-mode .nav-link.active.text-danger {
+  color: #f57d7d !important;
+}
+
+body.dark-mode .card-title {
+  color: #ffffff;
+}
+
+body.dark-mode .btn-outline-primary {
+  color: #6ea8fe;
+  border-color: #6ea8fe;
+}
+body.dark-mode .btn-outline-primary:hover {
+  background-color: #6ea8fe;
+  color: #121212;
+}
+
+body.dark-mode .btn-outline-secondary {
+  color: #adb5bd;
+  border-color: #adb5bd;
+}
+body.dark-mode .btn-outline-secondary:hover {
+  background-color: #adb5bd;
+  color: #121212;
+}
+
+body.dark-mode .btn-outline-danger {
+  color: #f57d7d;
+  border-color: #f57d7d;
+}
+body.dark-mode .btn-outline-danger:hover {
+  background-color: #f57d7d;
+  color: #121212;
+}
+
+body.dark-mode .modal-content {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border-color: #333;
+}
+body.dark-mode .modal-header {
+  border-bottom-color: #333;
+}
+body.dark-mode .modal-footer {
+  border-top-color: #333;
+}
+body.dark-mode .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: inherit;
+}
+
+body.dark-mode hr {
+  border-top-color: #333;
 }
 
 /* Calendar CSS */

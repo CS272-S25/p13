@@ -3,6 +3,14 @@ document.addEventListener('DOMContentLoaded', function() {
     let assignments = JSON.parse(localStorage.getItem('assignments')) || [];
     let initialized = false;
 
+   
+    const displayName = localStorage.getItem('username');
+    const welcomeElement = document.getElementById('welcome-message');
+    if (welcomeElement && displayName) {
+        welcomeElement.textContent = `Welcome, ${displayName}!`;
+    }
+   
+
     function makeCards() {
         if (initialized) return;
         
